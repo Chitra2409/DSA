@@ -33,6 +33,12 @@ class Solution {
     }
 }
 
-
+/*
+Explaination of solution-2
+1) Initialization: We start by initializing a variable result to 0. This variable will eventually hold the single number that appears only once in the array.
+2) XOR Operation in the Loop: We iterate through each element of the array (nums) using a loop. For each element, we perform the XOR operation (^) between the current value of result and the current element of the array.
+The XOR operation has the property that if you XOR a number with itself, the result is 0. If you XOR a number with 0, the result is the number itself. Therefore, when there are duplicate numbers, they cancel each other out.
+3) Final Result: After completing the loop, the result variable will contain the XOR of all the elements in the array. Due to the XOR properties, the duplicates have canceled each other out, leaving only the value that appears once.
+*/
 
 
