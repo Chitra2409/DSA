@@ -22,3 +22,6 @@ class Solution {
         return -1; // Target not found
     }
 }
+
+
+//int mid = (start + end) / 2; // might be possible that (start + end) exceeds the range of int in java
