@@ -1,6 +1,7 @@
 //Question link- https://leetcode.com/problems/is-subsequence/
 
 //Time complexity- O(n)
+//Approach explaination- https://leetcode.com/problems/is-subsequence/solutions/4507446/o-n-java-solution/
 
 class Solution {
     public boolean isSubsequence(String s, String t) {
