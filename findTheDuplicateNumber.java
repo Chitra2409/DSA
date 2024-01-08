@@ -14,3 +14,31 @@ class Solution {
     }
 }
 
+//Solution 2 - Without modifying the array
+class Solution {
+    public int findDuplicate(int[] nums) {
+        // Initialize slow and fast pointers
+        int slow = nums[0];
+        int fast = nums[0];
+
+        // Move slow by one step and fast by two steps until they meet
+        do {
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+        } while (slow != fast);
+
+        // Reset one pointer to the beginning
+        slow = nums[0];
+
+        // Move both pointers one step at a time until they meet again
+        while (slow != fast) {
+            slow = nums[slow];
+            fast = nums[fast];
+        }
+
+        // Return the duplicate number
+        return slow;
+    }
+}
+
+
