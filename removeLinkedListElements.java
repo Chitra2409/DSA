@@ -1,5 +1,7 @@
 //Question link - https://leetcode.com/problems/remove-linked-list-elements/description/
 
+//Time complexity - O(n)
+
 class Solution {
     public ListNode removeElements(ListNode head, int val) {
         if(head==null)
