@@ -1,6 +1,6 @@
-import java.io.*;
+import org.w3c.dom.Node;
 
-public class LL {
+public class display_SizeLL {
     public static void main(String[] args) throws Exception {
         
         LinkedList slist = new LinkedList();
@@ -10,6 +10,7 @@ public class LL {
         slist.addLast(4); 
         
         testList(slist);
+        slist.display();
         
     }
 
@@ -35,15 +36,25 @@ public class LL {
             }
             size++;
         }
+        public int size(){
+            return size;
+
+        }
+        public void display(){
+            Node temp=head;
+            while(temp !=null){
+                System.out.print(temp.data+" -> ");
+                temp=temp.next;
+            }
+            System.out.println();
+
+        }
         
     }
 
     public static void testList(LinkedList list) {
         Node temp = list.head;
-        while (temp != null) {
-            System.out.println(temp.data);
-            temp = temp.next;
-        }
+
         System.out.println("Size: " + list.size);
 
         if (list.size > 0) {
@@ -51,3 +62,6 @@ public class LL {
         }
     }
 }
+
+
+            
