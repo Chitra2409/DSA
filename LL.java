@@ -1,6 +1,5 @@
-import org.w3c.dom.Node;
 
-public class display_SizeLL {
+public class removeInLL {
     public static void main(String[] args) throws Exception {
         
         LinkedList slist = new LinkedList();
@@ -8,9 +7,13 @@ public class display_SizeLL {
         slist.addLast(2);    
         slist.addLast(3);    
         slist.addLast(4); 
+        slist.removeFirst();
         
         testList(slist);
         slist.display();
+        slist.getFirst();
+        slist.getLast();
+        slist.getAt(2);
         
     }
 
@@ -43,10 +46,59 @@ public class display_SizeLL {
         public void display(){
             Node temp=head;
             while(temp !=null){
-                System.out.print(temp.data+" -> ");
+                System.out.print(temp.data+" ");
                 temp=temp.next;
             }
             System.out.println();
+
+        }
+        public void removeFirst(){
+            if(size==0){
+                System.out.println("List is empty");
+            }else if(size==1){
+                head=tail=null;
+                size=0;
+
+            }else{
+                head=head.next;
+                size--;
+            }
+        }
+
+        public int getFirst(){
+            if(size==0){
+                System.out.println("List is empty");
+                return -1;
+            }else{
+                return head.data;
+            }
+
+        }
+        public int getLast(){
+            if(size==0){
+                System.out.println("List is empty");
+                return -1;
+            }else{
+                return tail.data;
+            }
+
+        }
+        public int getAt(int idx){
+            if(size==0){
+                System.out.println("List is empty");
+                return -1;
+            }else if(idx<0 || idx>=size){
+                System.out.println("invalid arguments");
+                return -1;
+            }else{
+                Node temp=head;
+                for(int i=0;i<idx;i++){
+                    temp=temp.next;
+
+                }
+                return temp.data;
+
+            }
 
         }
         
