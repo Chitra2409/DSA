@@ -16,3 +16,10 @@ class Solution {
     return newArray;
 }
 }
+
+/*Explaination
+    If the loop completes without returning, it means that all the digits were 9. 
+    In this case, it creates a new array newNumber with a length one greater than the original array. 
+    It sets the first element of newNumber to 1, representing the carry, and the rest of the elements remain 0. 
+    This is because adding 1 to a number composed entirely of 9s will result in carrying over to the next place value.
+*/
