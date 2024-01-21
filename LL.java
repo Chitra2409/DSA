@@ -14,6 +14,9 @@ public class LL {
         slist.addAt(1, 80);
         slist.display();
         testList(slist);
+        slist.removeLast();
+        slist.display();
+        testList(slist);
     }
 
     public static class Node {
@@ -137,6 +140,24 @@ public class LL {
 
             }
 
+        }
+
+        public void removeLast(){
+            if(size==0){
+                System.out.println("Empty already");
+            }else if(size==1){
+                head=tail= null;
+                size=0;
+            }else{
+                Node temp=head;
+                for(int i =0;i<size-2;i++){
+                    temp= temp.next;
+                }
+                tail=temp;
+                temp.next=null;
+
+                size--;
+            }
         }
     }
         
