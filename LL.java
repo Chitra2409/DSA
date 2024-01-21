@@ -11,6 +11,7 @@ public class LL {
         int first= slist.getFirst();
         System.out.println(first); 
         slist.removeFirst();
+        slist.addAt(1, 80);
         slist.display();
         testList(slist);
     }
@@ -109,6 +110,33 @@ public class LL {
                 tail=temp;
             }
             size++;
+        }
+
+        public void addAt(int idx, int val){
+            
+            if(idx<0 || idx>size){
+                System.out.println("Invalid index");
+
+            }else if(idx==0){
+                addFirst(val);
+
+            }else if(idx==size){
+                addLast(val);
+
+            }else{
+                Node node = new Node();
+                node.data= val;
+                Node temp=head;
+                for(int i=0; i<idx-1;i++){
+                    temp=temp.next;
+
+                }
+                node.next=temp.next;
+                temp.next=node;
+                size++;
+
+            }
+
         }
     }
         
