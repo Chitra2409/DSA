@@ -1,20 +1,18 @@
 
-public class removeInLL {
+public class LL {
     public static void main(String[] args) throws Exception {
         
         LinkedList slist = new LinkedList();
         slist.addLast(1);    
         slist.addLast(2);    
         slist.addLast(3);    
-        slist.addLast(4); 
+        slist.addLast(4);
+        slist.addFirst(5);
+        int first= slist.getFirst();
+        System.out.println(first); 
         slist.removeFirst();
-        
-        testList(slist);
         slist.display();
-        slist.getFirst();
-        slist.getLast();
-        slist.getAt(2);
-        
+        testList(slist);
     }
 
     public static class Node {
@@ -99,10 +97,22 @@ public class removeInLL {
                 return temp.data;
 
             }
-
         }
-        
+
+        public void addFirst(int val){
+            Node temp= new Node();
+            temp.data= val;
+            temp.next= head;
+            head=temp;
+
+            if(size==0){
+                tail=temp;
+            }
+            size++;
+        }
     }
+        
+    
 
     public static void testList(LinkedList list) {
         Node temp = list.head;
