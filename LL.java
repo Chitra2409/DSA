@@ -15,8 +15,12 @@ public class LL {
         slist.display();
         testList(slist);
         slist.removeLast();
+        slist.removeAt(2);
         slist.display();
         testList(slist);
+        reversed= slist.reverseDI();
+        System.out.println(first); 
+        
     }
 
     public static class Node {
@@ -159,7 +163,54 @@ public class LL {
                 size--;
             }
         }
+
+        public void removeAt(int idx){
+            if(idx<0 || idx>=size){
+                System.out.println("Invalid index");
+
+            }else if(idx==0){
+                removeFirst();
+
+            }else if(idx==size-1){
+                removeLast();
+
+            }else{
+                Node temp= head;
+            for(int i=0; i<idx-1;i++){
+                temp= temp.next;
+            }
+            temp.next= temp.next.next;
+            size--;
+
+            }
+            
+        }
+        private Node getNodeAt(int idx){
+            Node temp=head;
+            for(int i=0;i<idx;i++){
+                temp=temp.next;
+            }
+            return temp;
+        }
+        public void reverseDI(){
+            int li=0;
+            int ri=size-1;
+
+            while(li<ri){
+                Node left= getNodeAt(li);
+                Node right = getNodeAt(ri);
+
+                int temp=left.data;
+                left.data=right.data;
+                right.data=temp;
+
+                li++;
+                ri--;
+            }
+            
+        }
     }
+    
         
     
 
