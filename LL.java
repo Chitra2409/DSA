@@ -1,4 +1,3 @@
-
 public class LL {
     public static void main(String[] args) throws Exception {
         
@@ -18,8 +17,8 @@ public class LL {
         slist.removeAt(2);
         slist.display();
         testList(slist);
-        reversed= slist.reverseDI();
-        System.out.println(first); 
+        slist.reverseDI();
+        slist.display();
         
     }
 
@@ -209,11 +208,11 @@ public class LL {
             }
             
         }
+        
+        
+
     }
     
-        
-    
-
     public static void testList(LinkedList list) {
         Node temp = list.head;
 
