@@ -1,3 +1,5 @@
+//A "linked list to stack adapter" typically refers to a software design pattern or a data structure implementation where a stack is built using a linked list as its underlying data structure.
+
 import java.util.*;
 public class linkedListToStackAdapter {
     public static void main(String args[]){
