@@ -13,7 +13,7 @@ public class Solution {
                 area = length * breadth;
                 break;
             default:
-                System.out.println("Invalid choice");
+                System.out.println("Invalid input");
         }
 
         return area;
